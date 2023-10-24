@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
   credentials: true,
-  origin: 'http://127.0.0.1:4000/api',
+  origin: 'https://pranay-booking-aq0v1spdl-pranay-singhs-projects.vercel.app/',
 }));
 
 async function uploadToS3(path, originalFilename, mimetype) {
