@@ -33,10 +33,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  credentials: true,
-  origin: 'http://127.0.0.1:5173',
-}));
+// app.use(cors({
+//   credentials: true,
+//   origin: 'http://127.0.0.1:5173',
+// }));
 
 async function uploadToS3(path, originalFilename, mimetype) {
   const client = new S3Client({
