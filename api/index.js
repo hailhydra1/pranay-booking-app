@@ -20,13 +20,14 @@ const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'fasefraw4r5r3wq45wdfgw34twdfg';
 const bucket = 'dawid-booking-app';
 
-app.use(express.json());
-app.use(cookieParser());
-app.use('/uploads', express.static(__dirname+'/uploads'));
 app.use(cors({
   credentials: true,
   origin: 'http://127.0.0.1:5173',
 }));
+app.use(express.json());
+app.use(cookieParser());
+app.use('/uploads', express.static(__dirname+'/uploads'));
+
 
 async function uploadToS3(path, originalFilename, mimetype) {
   const client = new S3Client({
