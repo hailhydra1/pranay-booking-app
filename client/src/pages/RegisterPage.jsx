@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const [name,setName] = useState('');
@@ -14,6 +15,8 @@ export default function RegisterPage() {
         email,
         password,
       });
+      const navigate = useNavigate();
+      navigate("/login");
       alert('Registration successful. Now you can log in');
     } catch (e) {
       alert('Registration failed. Please try again later');
