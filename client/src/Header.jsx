@@ -5,7 +5,7 @@ import {UserContext} from "./UserContext.jsx";
 export default function Header() {
   const {user} = useContext(UserContext);
   return (
-    <div className="bg-rose-100">
+    <div className="bg-rose-100 w-screen">
     <header className="flex justify-between bg-red-200">
       <Link to={'/'} className="flex items-center gap-1 ">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 -rotate-90">
